@@ -1,0 +1,188 @@
+@partbgc:aqua;
+#settingMenu{
+    
+    .settingPart{
+        background-color: @partbgc;
+        position: absolute;
+        top: -300px;
+        transform-origin: left bottom;
+        animation: bgScale .3s linear;
+        border-radius: 30px;
+        box-shadow: 5px 5px 8px rgb(185, 184, 184);
+        z-index: 5;
+        padding: 12px;
+        display: none;
+        h2,p{
+            font-weight: normal;
+            font-size: 15px;
+        }
+        h2{
+            text-align: center;
+            font-size: 25px;
+            font-weight: bold;
+        }
+        p{
+            line-height: 24px;
+        }
+        
+        
+        
+    }
+    @keyframes bgScale {
+        from{
+            transform: scale(0);
+        };
+        to{
+            transform: scale(1);
+        }
+    }
+    .settingPart::before{
+        content: '';
+        width: 20px;
+        height: 20px;
+        background-color: @partbgc;
+        position: absolute;
+        z-index: 4;
+        transform: rotate(45deg);
+        top: 270px;
+    }
+    #part1{
+        width: 280px;
+        height: 280px;
+    }
+    #part1::before{
+        left: 50px;
+    }
+    #part2{
+        width: 420px;
+        height: 280px;
+        left: 100px;
+        p{
+            font-size: 10px;
+        }
+    }
+    #part2::before{
+        left: 95px;
+    }
+    #part3{
+        width: 280px;
+        height: 280px;
+        left: 200px;
+        z-index: 6;
+        // display: flex;
+        // justify-content: center;
+        .designmenucover{
+            width: 100%;
+            height: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: @partbgc;
+            border-radius: 30px;
+            animation: designmenucoverappear .3s linear forwards;
+            z-index: 5;
+        }
+        @keyframes designmenucoverappear {
+            from{
+                height: 0%;
+            };
+            to{
+                height:100%
+            }
+        }
+        #designhome{
+            display: inline;
+            font-size: 18px;
+            font-family: serif;
+            // background-color: rgb(15, 245, 53);
+            padding: 5px;
+            // border-radius: 15px;
+            opacity: 0;
+            position: absolute;
+            top: 240px;
+            left: 220px;
+            // animation: designhomeappear 1s linear forwards; 
+            z-index: 5;
+        }
+        @keyframes designhomeappear {
+            from{
+                opacity: 0;
+            };
+            to{
+                opacity: .4;
+            }
+        }
+        #designmenu{
+            width: 100%;
+            height: 200px;
+            list-style-type: none;
+            margin: auto;
+            position: relative;
+            li{
+                height: 30px;
+                background-color: aquamarine;
+                margin: 15px auto auto 50%;
+                transform: translateX(-50%);
+                padding: 5px;
+                line-height: 20px;
+                border: 1px solid black;
+                border-radius: 10px;
+                // display: flex;
+                // justify-content: center;
+                text-shadow: 0.5px 0.5px;
+                box-shadow: 2px 2px 2px;
+                cursor: pointer;
+                position: absolute;
+            }
+            li:nth-child(1){
+                top: 0px;
+            }
+            li:nth-child(2){
+                top: 45px;
+            }
+            li:nth-child(3){
+                top: 90px;
+            }
+            li:nth-child(4){
+                top: 135px;
+            }
+            .designtitle:hover{
+                transform: translateX(-50%) scale(1.1);
+                transition: transform .2s;
+            }
+            .designtitleclick{
+                animation: designTitleClickMove .3s linear forwards;
+                z-index: 6;
+            }
+            @keyframes designTitleClickMove {
+                from{
+                    transform: translateX(-50%) scale(1);
+                    border-color: black; 
+                    background-color: aquamarine;
+                };
+                to{ 
+                    top: -70px;
+                    transform: translateX(-50%) scale(1.2);
+                    border-color: transparent;
+                    background-color: @partbgc;
+                    box-shadow: none;
+                    font-size: 25px;
+                }
+
+            }
+        }
+
+    }
+    #part3::before{
+        left: 130px;
+    }
+    #part4{
+        width: 280px;
+        height: 280px;
+        left: 250px;
+    }
+    #part4::before{
+        left: 205px;
+    }
+}
+

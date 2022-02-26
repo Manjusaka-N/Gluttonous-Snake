@@ -1,0 +1,73 @@
+#setting {
+  display: none;
+}
+#setting #snakeline {
+  width: 600px;
+  height: 254px;
+  background-image: url("src/snakebg.png");
+  background-size: 600px 280px;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 100px;
+  left: -145px;
+  z-index: 3;
+}
+#setting #settingMenu {
+  width: 500px;
+  position: absolute;
+  left: -100px;
+  top: 200px;
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+}
+#setting #settingMenu .settingTitle {
+  display: flex;
+  justify-content: space-between;
+  height: 30px;
+  background-color: #74f71d;
+  padding: 5px;
+  line-height: 20px;
+  border-radius: 10px;
+  user-select: none;
+  cursor: pointer;
+}
+#setting::before {
+  content: '';
+  width: 520px;
+  height: 155px;
+  background-color: white;
+  position: absolute;
+  left: -108px;
+  top: 195px;
+  animation: disappear 0.6s linear forwards;
+  z-index: 4;
+}
+@keyframes disappear {
+  from {
+    height: 155px;
+  }
+  to {
+    height: 0px;
+  }
+}
+#settinglogo {
+  width: 80px;
+  height: 80px;
+  background-image: url("src/cute-snake-cartoon-hand-drawn-style-vector-26659311.jpeg");
+  background-size: 85px 88px;
+  border-radius: 40px;
+  position: absolute;
+  top: 325px;
+  cursor: pointer;
+  z-index: 5;
+}
+#maincover {
+  width: 600px;
+  height: 600px;
+  background-color: white;
+  position: absolute;
+  top: -110px;
+  z-index: 3;
+  display: none;
+}

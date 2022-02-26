@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>贪吃蛇</title>
+    <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="style/settingPart.css">
+    <link rel="stylesheet" href="style/settingPartBg.css">
+</head>
+
+<body>
+
+    <div id="main">
+        <div id="maincover"></div>
+        <div id="settingcover"></div>
+        <div id="settinglogo"></div>
+        <div id="setting">
+            <div id="snakeline"></div>
+            <div id="settingMenu">
+                    <div>
+                        <div class="settingTitle">Introduce</div>
+                        <div class="settingPart" id="part1">
+                                <h2>游戏介绍</h2>
+                                <p>善良可爱的小蛇蛇误入迷幻世界，只有闯过重重关卡才能重获自由。让我们一起来帮助小蛇蛇吧！</p>
+                                <p>这是一款适合5-6岁小朋友的闯关类游戏，本游戏以B站尚硅谷typescript教程中的贪吃蛇练习为基础构架，经曼殊沙华南72小时呕心沥血，不眠不休的完善后，该巨作《小蛇蛇历险记》终于面世。</p>
+                        </div>
+                        
+                    </div>
+                    <div>
+                        <div class="settingTitle">Rules</div>
+                        <div class="settingPart" id="part2">
+                            <h2>游戏规则</h2>
+                            <p>rule1：本游戏共有10关，每9分为一关，当分数达到第十关（100分）时，小蛇蛇重获自由。</p>
+                            <p>rule2：每吃到一个食物，分数加1分，每9分后，进入下一关，小蛇蛇的游动速度随关卡的增加而逐渐变快。</p>
+                            <p>rule3：键盘上的上下左右箭头可控制小蛇蛇的游动方向，长按方向键可加速30%，松开恢复。按下PAUSE键，可暂停游戏；按下START键，可继续游戏；按下P键后可暂停游戏，再下按下P键也继续游戏。</p>
+                            <p>rule4：当小蛇蛇撞到墙壁或蛇头撞到蛇身后，游戏结束。按下RESET键可重新开始游戏。</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="settingTitle">Design</div>
+                        <div class="settingPart" id="part3">
+                            <h2>蛇蛇定制</h2>
+                            <p>可根据个人喜好对小蛇蛇进行定制。</p>
+                            <div id="designmenucover"></div>
+                            <div id="designhome">Home</div>
+                            <ul id="designmenu">
+                                <li class="designtitle">HEAD</li>
+                                <li class="designtitle">BODY</li>
+                                <li class="designtitle">TAIL</li>
+                                <li class="designtitle">PREVIEW</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="settingTitle">Music</div>
+                        <div class="settingPart" id="part4">
+                            <h2>音乐</h2>
+                            <p></p>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <div id="timeCount"></div>
+        <div id="crash">
+            <p></p>
+            <span>press <strong>RESET</strong> button to restart the game</span>
+        </div>
+        <div id="area">
+            <div id="snake">
+                <div class="body" class="head" id="head">
+                    <div class="eyes" id="eyeleft"></div>
+                    <div class="eyes" id="eyeright"></div>
+                </div>
+                <div class="body" id="middle"></div>
+                <div class="body" id="tail"></div>
+
+            </div>
+            <div id="food">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div id="sl">
+            <div>
+                SCORE:<span id="score">0</span>
+            </div>
+            <div>
+                LEVEL:<span id="level">0</span>
+            </div>
+        </div>
+        <div id="btnArea">
+            <div id="startBtn">START</div>
+            <div id="pauseBtn">PAUSE</div>
+            <div id="resetBtn">RESET</div>
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

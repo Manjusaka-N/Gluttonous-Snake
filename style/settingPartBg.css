@@ -1,0 +1,172 @@
+#settingMenu .settingPart {
+  background-color: aqua;
+  position: absolute;
+  top: -300px;
+  transform-origin: left bottom;
+  animation: bgScale 0.3s linear;
+  border-radius: 30px;
+  box-shadow: 5px 5px 8px #b9b8b8;
+  z-index: 5;
+  padding: 12px;
+  display: none;
+}
+#settingMenu .settingPart h2,
+#settingMenu .settingPart p {
+  font-weight: normal;
+  font-size: 15px;
+}
+#settingMenu .settingPart h2 {
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+}
+#settingMenu .settingPart p {
+  line-height: 24px;
+}
+@keyframes bgScale {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+#settingMenu .settingPart::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background-color: aqua;
+  position: absolute;
+  z-index: 4;
+  transform: rotate(45deg);
+  top: 270px;
+}
+#settingMenu #part1 {
+  width: 280px;
+  height: 280px;
+}
+#settingMenu #part1::before {
+  left: 50px;
+}
+#settingMenu #part2 {
+  width: 420px;
+  height: 280px;
+  left: 100px;
+}
+#settingMenu #part2 p {
+  font-size: 10px;
+}
+#settingMenu #part2::before {
+  left: 95px;
+}
+#settingMenu #part3 {
+  width: 280px;
+  height: 280px;
+  left: 200px;
+  z-index: 6;
+}
+#settingMenu #part3 .designmenucover {
+  width: 100%;
+  height: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: aqua;
+  border-radius: 30px;
+  animation: designmenucoverappear 0.3s linear forwards;
+  z-index: 5;
+}
+@keyframes designmenucoverappear {
+  from {
+    height: 0%;
+  }
+  to {
+    height: 100%;
+  }
+}
+#settingMenu #part3 #designhome {
+  display: inline;
+  font-size: 18px;
+  font-family: serif;
+  padding: 5px;
+  opacity: 0;
+  position: absolute;
+  top: 240px;
+  left: 220px;
+  z-index: 5;
+}
+@keyframes designhomeappear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.4;
+  }
+}
+#settingMenu #part3 #designmenu {
+  width: 100%;
+  height: 200px;
+  list-style-type: none;
+  margin: auto;
+  position: relative;
+}
+#settingMenu #part3 #designmenu li {
+  height: 30px;
+  background-color: aquamarine;
+  margin: 15px auto auto 50%;
+  transform: translateX(-50%);
+  padding: 5px;
+  line-height: 20px;
+  border: 1px solid black;
+  border-radius: 10px;
+  text-shadow: 0.5px 0.5px;
+  box-shadow: 2px 2px 2px;
+  cursor: pointer;
+  position: absolute;
+}
+#settingMenu #part3 #designmenu li:nth-child(1) {
+  top: 0px;
+}
+#settingMenu #part3 #designmenu li:nth-child(2) {
+  top: 45px;
+}
+#settingMenu #part3 #designmenu li:nth-child(3) {
+  top: 90px;
+}
+#settingMenu #part3 #designmenu li:nth-child(4) {
+  top: 135px;
+}
+#settingMenu #part3 #designmenu .designtitle:hover {
+  transform: translateX(-50%) scale(1.1);
+  transition: transform 0.2s;
+}
+#settingMenu #part3 #designmenu .designtitleclick {
+  animation: designTitleClickMove 0.3s linear forwards;
+  z-index: 6;
+}
+@keyframes designTitleClickMove {
+  from {
+    transform: translateX(-50%) scale(1);
+    border-color: black;
+    background-color: aquamarine;
+  }
+  to {
+    top: -70px;
+    transform: translateX(-50%) scale(1.2);
+    border-color: transparent;
+    background-color: aqua;
+    box-shadow: none;
+    font-size: 25px;
+  }
+}
+#settingMenu #part3::before {
+  left: 130px;
+}
+#settingMenu #part4 {
+  width: 280px;
+  height: 280px;
+  left: 250px;
+}
+#settingMenu #part4::before {
+  left: 205px;
+}
